@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/items"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:scaleType="centerCrop"
+                android:layout_height="200dp"
+                android:transitionName="thumbnail"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:maxLines="2"
+                android:padding="10dp"
+                android:ellipsize="end"
+                android:id="@+id/title"
+                android:gravity="bottom"
+                android:singleLine="false"
+                android:layout_marginTop="-50dp"
+                android:textColor="@color/white"
+                android:background="@color/trans"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/thumbnail"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:textSize="17sp"
+                android:id="@+id/description"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/published"
+                android:layout_margin="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

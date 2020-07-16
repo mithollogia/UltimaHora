@@ -1,0 +1,2 @@
+rootProject.name='Ultima Hora'
+include ':app'
